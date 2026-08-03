@@ -32,22 +32,25 @@
             overflow: hidden;
         }
 
-        #content{
-            width: 100vw;
-            height: 100vh;
-            background-color: #fa83b1; 
+        #content, #game {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        #content{
+            background-color: #fa83b1;
         }
 
         #game{
-            position: relative;
-            width: 100%;
             aspect-ratio: 2/1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         #game-canvas{
@@ -66,8 +69,8 @@
             width: 18%;
             height: 5%;
             position: absolute;
-            top: 70%;
-            left: 68%;
+            top: 76%;
+            left: 78%;
             border-radius: 40px;
             padding: 0.8%;
             border: 0.4vw solid #54aad4;
@@ -79,6 +82,8 @@
             font-size: 1.4vw;
             color: #e771b2;
             text-align: center;
+            transform: translate(-50%, -50%);
+            z-index: 10;
         }
 
         #nome, .cursor-customizado{
